@@ -21,5 +21,6 @@ public class FollowPlayer : MonoBehaviour
         // Gets the current 'transform' component (the camera in this scenario)
         // offsets the camera's position using a new Vector3
         transform.position = player.transform.position + camOffset;
+        //transform.rotation = player.transform.rotation;
     }
 }
