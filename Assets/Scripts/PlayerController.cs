@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
         // Rotates the car on the Y axis
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
+
     }
 
 }
