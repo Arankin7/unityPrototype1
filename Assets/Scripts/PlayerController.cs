@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
 
+    public string inputID;
+
     // Start is called before the first frame update
     void Start()
     {    
@@ -17,8 +19,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        forwardInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal" + inputID);
+        forwardInput = Input.GetAxis("Vertical" + inputID);
 
         // Moves the car forward along the Z axis.  
         transform.Translate(Vector3.forward * Time.deltaTime * truckSpeed * forwardInput);

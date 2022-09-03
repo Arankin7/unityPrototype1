@@ -8,7 +8,8 @@ public class CameraSwitcher : MonoBehaviour
     public Camera thirdPersonView;
     public Camera firstPersonView;
 
-    public float cameraInput;
+    //public float cameraInput;
+    public KeyCode switchKey;
 
     private void Start()
     {
@@ -32,9 +33,9 @@ public class CameraSwitcher : MonoBehaviour
 
     private void LateUpdate()
     {
-        cameraInput = Input.GetAxis("Jump");
+       // cameraInput = Input.GetAxis("Jump");
 
-        if (cameraInput == 1)
+        if (Input.GetKeyDown(switchKey))
         {
             ChangeView();
         }
